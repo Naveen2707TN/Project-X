@@ -1,0 +1,137 @@
+body{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+}
+.lab{
+    padding: 2%;
+}
+.main{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    animation: fadeIn 1s ease-in-out;
+}
+.left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.head{
+    width: 50vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5%;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.mid{
+    width: 50vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 5%;
+}
+.bottom{
+    width: 50vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5%;
+
+}
+.ico{
+    width: 25px;
+    height: 25px;
+}
+.icons{
+    width: 32px;
+    height: 32px;
+}
+.labe{color: #34495e;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.from{
+    width: 50vw;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.email_div,
+.name_div,
+.pass_div{
+    width: 350px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.email,
+.name,
+.pass{
+    width: 270px;
+    height: 36px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.right{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.icon{
+    width: 49vw;
+    height: 98vh;
+    border: none;
+    border-radius: 20px;
+}
+.btn{
+    width: 50vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns{
+    width: 110px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+.log{
+    text-decoration: none;
+    color: rgb(66, 66, 245);
+    padding-left: 10px;
+}
