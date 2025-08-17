@@ -1,0 +1,73 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.head{
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.icons{
+    padding-left: 20px;
+    width: 28px;
+    height: 28px;
+}
+.label{
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.upload{
+    width: 300px;
+    height: 150px;
+    border-radius: 17px;
+    border: 1px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+        cursor: pointer;
+
+}
+.files{
+    display: none;
+}
+.name{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    word-break: break-word;
+    padding: 20px;
+}
+.upload:active{
+    border: 1px dashed rgb(75, 75, 238);
+    cursor: pointer;
+}
+.upload:hover{
+    border: 1px dashed rgb(75, 75, 238);
+    cursor: pointer;
+}
+.btn{
+    width: 110px;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

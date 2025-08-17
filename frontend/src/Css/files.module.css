@@ -1,0 +1,79 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 80vw;
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.head{
+    width: 80vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    width: 40vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.right{
+    width: 40vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.search{
+    width: 290px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-right: 40px;
+}
+.sear{
+    width: 250px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+.sicon{
+    width: 22px;
+    height: 22px;
+}
+.se{
+    width: 220px;
+    height: 38px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+    padding-left: 20px;
+}
+.arrow{
+    width: 14px;
+    height: 14px;
+    padding-left: 20px;
+}
+.name{
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

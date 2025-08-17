@@ -1,0 +1,40 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+.main{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 25px;
+}
+.left{
+    width: 47vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.right{
+    width: 48vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.img{
+    width: 47vw;
+    height: 93vh;
+    border-radius: 20px;
+}

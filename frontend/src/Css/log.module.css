@@ -1,0 +1,138 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main{
+    width: 47vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.head{
+    width: 47vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.logo{
+    width: 28px;
+    height: 28px;
+    padding-left: 25px;
+}
+.title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #34495e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+}
+.mid{
+    width: 47vw;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #34495e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.form{
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.email_div,
+.pass_div{
+    width: 340px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+}
+.email{
+    width: 270px;
+    height: 36px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 2.5px;
+}
+.pass{
+    width: 220px;
+    height: 36px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 2.5px;
+}
+.pass_sh{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.err{
+    text-align: center;
+}
+.sh{
+    width: 25px;
+    height: 25px;
+}
+.sh:active{
+    transform: scale(0.90);
+}
+.btns{
+    width: 350px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.for{
+    color: rgb(64, 64, 255);
+    cursor: pointer;
+}
+.btn{
+    width: 110px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+.bot{
+    width: 47vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+a{
+    color: rgb(241, 63, 63);
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.det{
+    padding-left: 25px;
+}

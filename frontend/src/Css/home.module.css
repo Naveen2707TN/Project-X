@@ -1,0 +1,90 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.head{
+    width: 100vw;
+    height: 8vh;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.le{
+    width: 50vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.logo{
+    width: 28px;
+    height: 28px;
+    padding-left: 25px
+}
+.title{
+    padding-left: 20px;
+    font-weight: 500;
+    color: #34495e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+}
+.ri{
+    width: 50vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.name{
+    width: auto;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 20px;
+}
+.icon{
+    padding-left: 10px;
+    width: 32px;
+    height: 32px;
+}
+.name{
+    padding-left: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cont{
+    width: 100vw;
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.left{
+    width: 19vw;
+    height: 91vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+.right{
+    width: 80vw;
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

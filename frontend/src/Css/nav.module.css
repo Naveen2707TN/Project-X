@@ -1,0 +1,55 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.main{
+    width: 19vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.NavLink{
+    text-decoration: none;
+    cursor: pointer;
+}
+.ui{
+    width: 17vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+        cursor: pointer;
+
+}
+.left{
+    width: 5vh;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    width: 11vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+        cursor: pointer;
+
+}
+.icon{
+    width: 32px;
+    height: 32px;
+}
+.name{
+    padding-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
