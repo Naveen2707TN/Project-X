@@ -7,10 +7,10 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Register from './Pages/Register';
 import Verify from './Pages/Verify';
 import Home from './Pages/Home';
-import DashBoard from './Pages/Dashboard';
 import Upload from './Pages/upload';
 import Files from './Pages/Files';
 import Settings from './Pages/Settings';
+import Storage from './Pages/Storage';
 
 const routers = createBrowserRouter([
   {
@@ -26,8 +26,8 @@ const routers = createBrowserRouter([
     path: "/home",
     element: <Home/>,
     children: [
-      {index: true, element: <DashBoard />},
-      {path: "upload", element: <Upload />},
+      {index: true, element: <Upload />},
+      {path: "storage", element: <Storage />},
       {path: "files", element: <Files />},
       {path: "settings", element: <Settings />}
     ]

@@ -6,16 +6,6 @@ function NavBar(){
             <NavLink to={"/home"} className={nav.NavLink}>
                 <div className={nav.ui}>
                     <div className={nav.left}>
-                        <img alt='icons' src='/dashboard.png' className={nav.icon} />
-                    </div>
-                    <div className={nav.right}>
-                        <label className={nav.name}>Dashboard</label>
-                    </div>
-                </div>
-            </NavLink>
-            <NavLink to={"/home/upload"} className={nav.NavLink}>
-                <div className={nav.ui}>
-                    <div className={nav.left}>
                         <img alt='icons' src='/upload.png' className={nav.icon} />
                     </div>
                     <div className={nav.right}>
@@ -40,6 +30,16 @@ function NavBar(){
                     </div>
                     <div className={nav.right}>
                         <label className={nav.name}>Settings</label>
+                    </div>
+                </div>
+            </NavLink>
+            <NavLink to={"/home/storage"} className={nav.NavLink}>
+                <div className={nav.ui}>
+                    <div className={nav.left}>
+                        <img alt='icons' src='/database.png' className={nav.icon} />
+                    </div>
+                    <div className={nav.right}>
+                        <label className={nav.name}>Storage</label>
                     </div>
                 </div>
             </NavLink>
