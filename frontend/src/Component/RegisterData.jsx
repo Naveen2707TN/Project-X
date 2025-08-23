@@ -1,12 +1,47 @@
 import reg from '../Css/reg.module.css';
-import {useState} from 'react'
+import {useRef, useState} from 'react'
+import Load from './load';
+import { useNavigate } from 'react-router-dom';
 function RegisterData(){
 
-    const[show, showPass] = useState(true);
+    const[show, showPass] = useState(false);
+    const[name, setName] = useState('');
+    const[email, setEmail] = useState('');
+    const[pass, setPass] = useState('');
+    const[err, getErr] = useState('');
+    const[check, isCheck] = useState(false);
+
+    const navigate = useNavigate();
+    const refs = useRef(); 
+
+    function LoginUser(){
+        isCheck(true);
+        fetch(`http://localhost:8080/public/api/v1/reg`,{
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify({
+                "name" : name,
+                "email" : email,
+                "pass" : pass
+            })
+        }).then( async (res) => {
+            let data = await res.text();
+            if(res.ok){
+                isCheck(false);
+                localStorage.setItem("data", data);
+                navigate("/verify")
+            }else{
+                isCheck(false);
+                getErr(data);
+            }
+        }).catch((err) => console.log(err));
+    }
     
-        function ShowHide(){
-            showPass(!show);
-        }
+    function ShowHide(){
+        showPass(!show);
+   }
     
     return(
         <div className={reg.main}>
@@ -20,22 +55,23 @@ function RegisterData(){
                     <div className={reg.form}>
                         <div className={reg.email_div}>
                             <img alt='icons' src='/users.png' className={reg.icon} />
-                            <input type='email' placeholder='Enter the user name' className={reg.email} />
+                            <input type='text' placeholder='Enter the user name' className={reg.email} onChange={(e) => {setName(e.target.value)}} ref={refs} />
                         </div>
                         <div className={reg.email_div}>
                             <img alt='icons' src='/gmail.png' className={reg.icon} />
-                            <input type='email' placeholder='Enter your email id' className={reg.email} />
+                            <input type='email' placeholder='Enter your email id' className={reg.email} onChange={(e) => {setEmail(e.target.value)}} />
                         </div>
                         <div className={reg.pass_div}>
                             <img alt='icons' src='/password.png' className={reg.icon} />
-                            <input type={show ? "password" : "text"} placeholder='Create your password' className={reg.pass} />
+                            <input type={show ? "text" : "password"} placeholder='Create your password' className={reg.pass} onChange={(e) => {setPass(e.target.value)}} />
                             <div className={reg.pass_sh}>
                                 <img alt='icon' src={show ? "/view.png" : "/hide.png"} className={reg.sh} onClick={(e) => {ShowHide()}} />
                             </div>
                         </div>
-                        <label className={reg.err}></label>
+                        {check && <Load />}
+                        <label className={reg.err}>{err}</label>
                         <div className={reg.btns}>
-                            <input type='button' value={"Sign In"} className={reg.btn} />
+                            <input type='button' value={"Sign In"} className={reg.btn} onClick={(e) => {LoginUser()}}/>
                         </div>
                     </div>
                 </div>

@@ -11,17 +11,24 @@ import Upload from './Pages/upload';
 import Files from './Pages/Files';
 import Settings from './Pages/Settings';
 import Storage from './Pages/Storage';
+import Share from './Pages/Share';
+import Logout from './Component/logout';
+import Reset from './Component/reset';
+import Error from './Component/Error';
 
 const routers = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <App/>,
+    errorElement: <Error />
   },{
     path: "/sign-up",
-    element: <Register />
+    element: <Register />,
+    errorElement: <Error />
   },{
     path: "/verify",
-    element: <Verify />
+    element: <Verify />,
+    errorElement: <Error />
   },{
     path: "/home",
     element: <Home/>,
@@ -29,8 +36,20 @@ const routers = createBrowserRouter([
       {index: true, element: <Upload />},
       {path: "storage", element: <Storage />},
       {path: "files", element: <Files />},
-      {path: "settings", element: <Settings />}
+      {path: "settings", element: <Settings />},
+      {path: "logout", element: <Logout />}
     ]
+  },{
+    path: "/share",
+    element: <Share />,
+    errorElement: <Error />
+  },{
+    path:"/reset",
+    element: <Reset />,
+    errorElement: <Error />
+  },{
+    path:"/err",
+    element: <Error />
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

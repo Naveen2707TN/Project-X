@@ -136,3 +136,23 @@ h2{
 .det{
     padding-left: 25px;
 }
+@media (max-width: 480px){
+    .det{
+        padding-left: 20px;
+        font-size: 14px;
+    }
+    .bot{
+        width: 100vw;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .a{
+        color: rgb(133, 75, 248);
+        text-decoration: none;
+        cursor: pointer;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+}

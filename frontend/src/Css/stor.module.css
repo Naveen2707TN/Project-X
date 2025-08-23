@@ -65,6 +65,7 @@ body{
     border-radius: 25px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.10);
     flex-direction: column;
+    border-collapse: collapse;
 }
 .thead{
     width: 40vw;
@@ -73,6 +74,7 @@ body{
     border-top-right-radius: 25px;
     background-color: #fafafa;
     color: black;
+    position: sticky;
 }
 .tr{
     width: 40vw;
@@ -114,7 +116,9 @@ body{
     height: 23.9vh;
     display: flex;
     align-items: start;
-    justify-content: center;
+    justify-content: start;
+    flex-direction: column;
+    overflow: scroll;
 }
 .trs{
     width: 40vw;
@@ -151,4 +155,163 @@ body{
     font-weight: 500;
     color: #34495e;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media (max-width: 480px) {
+    .main{
+        width: 100%;
+        height: 91vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .bars{
+        width: 98%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .bar{
+        width: 98%;
+        height: 5vh;
+        background-color: white;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+    .progress{
+        width: 100%;
+        height: 100%;
+        transition: 0.8s;
+        background-color: #2196f3;
+    }
+    .space{
+        width: 98%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: end; 
+    }
+    .cont{
+        width: 98%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .deti{
+        width: 100%;
+        height: 45vh;
+        display: flex;
+        align-items: center;
+        justify-items: start;
+        flex-direction: column;
+    }
+    .title{
+        font-size: 13px;
+        font-weight: 500;
+        color: #34495e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .table{
+        width: 90%;
+        height: 32vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 25px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.10);
+        flex-direction: column;
+        border-collapse: collapse;
+    }
+    .thead{
+        width: 100%;
+        height: 8vh;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        background-color: #fafafa;
+        color: black;
+        position: sticky;
+    }
+    .tr{
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .tbody{
+        width: 100%;
+        height: 23.9vh;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        overflow: scroll;
+    }
+    .trs{
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: 0.5px solid #555555;
+    }
+    .name{
+        width: 50%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .size{
+        width: 25%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .date{
+        width: 25%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .names{
+        width: 50%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .sizes{
+        width: 25%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dates{
+        width: 25%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .titles{
+        padding-left: 14px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #34495e;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }

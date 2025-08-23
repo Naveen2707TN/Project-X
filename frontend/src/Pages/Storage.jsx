@@ -2,11 +2,44 @@ import { useEffect, useState } from 'react';
 import stor from '../Css/stor.module.css';
 function Storage(){
 
-    const[perc, setPerc] = useState(10);
+    const[size, setSize] = useState("0 Mb");
+    const[datas, getDatas] = useState([]);
 
+    function GetStorage(){
+        fetch(`http:///localhost:8080/private/api/v1/storage`,{
+            method: "GET",
+            headers:{
+                "Authorization" : `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then(async(res) => {
+            let data = await res.text();
+            if(res.ok){
+                setSize(data);
+            }
+        }).catch((err) => console.log(err));
+    }
+
+    function ListFiles(){
+        fetch(`http://localhost:8080/private/api/v1/data`,{
+            method: "GET",
+            headers: {
+                "Authorization" : `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then((res) => {
+            if(res.ok){
+                return res.json();
+            }
+        }).then((data) => {
+            getDatas(data);
+        }).catch((err) => console.log(err));
+    }
     useEffect(() => {
-            setPerc(20);
-    },[])
+        GetStorage();
+        ListFiles();
+    },[]);
+        let remSpace = parseFloat(size.replace("Mb" , ""));
+        let space = parseInt(remSpace);
+    
     return(
         <div className={stor.main}>
             <h2>Cloud File Storage</h2>
@@ -15,12 +48,12 @@ function Storage(){
                     <label>Total Space : 100 MB</label>
                 </div>
                 <div className={stor.bar}>
-                    <div className={stor.progress} style={{transform : `translateX(${perc - 100}%)`}}>
+                    <div className={stor.progress} style={{transform : `translateX(${space - 100}%)`}}>
                     </div>
                 </div>
                 <div className={stor.cont}>
-                    <label>Used Space :  10 Mb</label>
-                    <label>Available Space : 90 Mb</label>
+                    <label>Used Space :  {size}</label>
+                    <label>Available Space : {100 - remSpace}</label>
                 </div>
             </div>
             <div className={stor.deti}>
@@ -40,17 +73,19 @@ function Storage(){
                         </tr>
                         </thead>
                         <tbody className={stor.tbody}>
-                            <tr className={stor.trs}>
-                                <th className={stor.names}>
-                                    <label className={stor.titles}>Application/JSON</label>
-                                </th>
-                                <th className={stor.sizes}>
-                                    <label className={stor.title}>10MB</label>
-                                </th>
-                                <th className={stor.dates}>
-                                    <label className={stor.title}>3</label>
-                                </th>
-                            </tr>
+                            {datas.map((data) => (
+                                <tr className={stor.trs} key={data.id}>
+                                    <th className={stor.names}>
+                                        <label className={stor.titles}>{data.type}</label>
+                                    </th>
+                                    <th className={stor.sizes}>
+                                        <label className={stor.title}>{data.size}</label>
+                                    </th>
+                                    <th className={stor.dates}>
+                                        <label className={stor.title}>{data.count}</label>
+                                    </th>
+                                </tr>
+                            ))}
                         </tbody>
                 </table>
             </div>

@@ -43,7 +43,7 @@ function NavBar(){
                     </div>
                 </div>
             </NavLink>
-            <NavLink to={"/home"} className={nav.NavLink}>
+            <NavLink to={"/home/logout"} className={nav.NavLink}>
                 <div className={nav.ui}>
                     <div className={nav.left}>
                         <img alt='icons' src='/logout.png' className={nav.icon} />

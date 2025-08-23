@@ -136,3 +136,36 @@ a{
 .det{
     padding-left: 25px;
 }
+@media (max-width: 480px){
+    .form{
+        width: 350px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .det{
+        padding-left: 20px;
+        font-size: 14px;
+    }
+    .for{
+        padding-left: 10px;
+        color: rgb(64, 64, 255);
+        cursor: pointer;
+    }
+    .bot{
+        width: 100vw;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    a{
+        color: rgb(241, 63, 63);
+        text-decoration: none;
+        cursor: pointer;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+}

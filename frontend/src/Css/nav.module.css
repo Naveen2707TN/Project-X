@@ -53,3 +53,57 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
 }
+
+@media (max-width: 480px) {
+    .main{
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .NavLink{
+        width: 50px;
+        height: 5vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .ui{
+        width: 50px;
+        height: 5vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .left{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .icon{
+        width: 18px;
+        height: 18px;
+    }
+    .right{
+        width: 25px;
+        height: 25px;
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .name{
+        padding-left: 15px;
+        text-decoration: none;
+        color: black;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        cursor: pointer;
+        font-size: 11px;
+    }
+}

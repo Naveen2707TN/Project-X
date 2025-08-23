@@ -109,3 +109,10 @@ p{
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+@media (max-width: 480px) {
+    .cont{
+        width: 480px;
+        height: auto;
+        padding: 10px;
+    }
+}

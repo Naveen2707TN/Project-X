@@ -1,0 +1,72 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main{
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.10);
+    flex-direction: column;
+}
+.inp{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.pass{
+    width: 450px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btns{
+    width: 450px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.btn{
+    width: 140px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.icon{
+    width: 38px;
+    height: 38px;
+}
+.passw{
+    width: 300px;
+    height: 42px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.sh{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ico{
+    width: 24px;
+    height: 24px;
+}

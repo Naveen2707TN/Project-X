@@ -48,7 +48,7 @@ body{
     align-items: center;
     justify-content: end;
 }
-.name{
+.names{
     width: auto;
     height: 7vh;
     display: flex;
@@ -87,4 +87,74 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+@media (max-width: 480px) {
+    body{
+        width: 100%;
+        height: 100vh;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .head{
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+    }
+    .le{
+        display: none;
+    }
+    .ri{
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .names{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    .name{
+        font-size: 12px;
+        padding-left: 14px;
+    }
+    .cont{
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+    }
+    .left{
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        align-self: center;
+        justify-content: space-evenly;
+        border: none;
+        background-color: white;
+    }
+    .right{
+        width: 100%;
+        height: 86vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
 }
